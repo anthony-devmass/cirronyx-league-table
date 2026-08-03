@@ -3,6 +3,4 @@ Créer dans Visual Studio Code une interface professionnelle de tableau de class
 
 
 # structure du projet:
-
-CIRRONYX-LEAGUE_TABLE
-|-
+    
