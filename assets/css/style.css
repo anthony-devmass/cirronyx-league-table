@@ -2,11 +2,12 @@ body{
     background-color: #131313;
 }
 .league-header {
-    background: linear-gradient(90deg, #9fbbdb, #00cc77);
-    padding: 20px;
+    background: linear-gradient(90deg, #9fbbdb, #00b4ccf8);
+    /* padding: 20px; */
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+    font-family:Fantasy;
     border-bottom: 2px solid #77777758;
     border-radius: 5px;
 }
@@ -24,16 +25,19 @@ main-nav h1 {
     color: #fff;
     font-family: Arial, sans-serif;
     
+    
 }
 .club-logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
-.club-logo img {
-    height: 70px;
-    margin-right: 20px;
+img {
+    height: 45px;
+    margin-right: 55px;
+    margin:0px;
 }
 
 .league-header ul {
