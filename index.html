@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Becte League</title>
+    <meta name="description" content="Classement officiel de la Cirro League">
+    <title>Cirro League | Classement</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="league-header">
+    <header class="league-header">
         <div class="main-nav">
-        <div >
-            <div><h1><img src="assets/images/clubs/logo.png" alt="Becte League Logo">Becte League</h1></div>
-        </div>
-        <div>
+            <a class="brand" href="#top" aria-label="Cirro League, accueil">
+                <img src="assets/images/clubs/logo.png" alt="">
+                <span>Cirro <strong>League</strong></span>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Teams</a></li>
-                    <li><a href="#">Matches</a></li>
-                    <li><a href="#">Standings</a></li>
+                    <li><a href="#top">Accueil</a></li>
+                    <li><a href="#teams">Équipes</a></li>
+                    <li><a href="#matches">Matchs</a></li>
+                    <li><a class="active" href="#standings" aria-current="page">Classement</a></li>
                 </ul>
             </nav>
         </div>
-        </div>
-        
-    </div>
-    <main class="league-page">
-        <h2>Principale</h2>
-        <table class="league-table">
-            <thead class="form-list">
+    </header>
+
+    <main id="top" class="league-page">
+        <section class="page-intro" aria-labelledby="standings-title">
+            <div>
+                <p class="eyebrow">Saison 2024 / 2025 <span aria-hidden="true"></span> Journée 10</p>
+                <h1 id="standings-title">Classement <em>principal</em></h1>
+                <p class="intro-copy">Les clubs les plus réguliers de la saison, réunis en un seul coup d’œil.</p>
+            </div>
+            <div class="live-status"><span class="live-dot" aria-hidden="true"></span> Données actualisées</div>
+        </section>
+
+        <section id="standings" class="table-card" aria-labelledby="table-title">
+            <div class="table-heading">
+                <div>
+                    <p class="section-kicker">Vue d’ensemble</p>
+                    <h2 id="table-title">Classement des clubs</h2>
+                </div>
+                <div class="legend" aria-label="Légende de la forme récente">
+                    <span><i class="win">W</i> Victoire</span>
+                    <span><i class="draw">D</i> Nul</span>
+                    <span><i class="loss">L</i> Défaite</span>
+                </div>
+            </div>
+            <div class="table-scroll">
+            <table class="league-table">
+                <caption class="sr-only">Classement des clubs de la Cirro League</caption>
+                <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Club</th>
-                    <th>MP</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>GF</th>
-                    <th>GA</th>
-                    <th>GD</th>
-                    <th>PTS</th>
-                    <th>Form</th>
+                    <th scope="col">#</th><th scope="col">Club</th><th scope="col">MJ</th><th scope="col">G</th><th scope="col">N</th><th scope="col">P</th><th scope="col">BP</th><th scope="col">BC</th><th scope="col">Diff.</th><th scope="col">Pts</th><th scope="col">Forme</th>
                 </tr>
-            </thead>    
+                </thead>
             <tbody>
                 <tr>
                     <td>1</td>
@@ -59,7 +71,7 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td> <div class="club-cell"><img src="assets/images/clubs/As-Roma.png" alt="As-Roma"> As-Roma</div></td>
+                    <td> <div class="club-cell"><img src="assets/images/clubs/AS-Roma.png" alt="As-Roma"> As-Roma</div></td>
                     <td>10</td>
                     <td>7</td>
                     <td>2</td>
@@ -149,7 +161,14 @@
                     <td><span style="background-color: green;">W</span><span style="background-color: green;">W</span><span style="background-color: gold;">D</span><span style="background-color: green;">W</span><span style="background-color: red;">L</span></td>
                 </tr>
             </tbody>
-        </table>
+            </table>
+            </div>
+        </section>
+        <div class="table-footer">
+            <span><b class="accent-line"></b> Qualification européenne</span>
+            <span>Dernière mise à jour : aujourd’hui</span>
+        </div>
     </main>
+    <footer class="site-footer">Cirro League <span>•</span> Le football, en chiffres.</footer>
 </body>
 </html>
