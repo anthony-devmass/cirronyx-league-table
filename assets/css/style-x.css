@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --ink: #eaf4f3;
-    --muted: #8da3a5;
-    --surface: #142326;
-    --page: #0b1719;
-    --line: rgba(180, 216, 210, .12);
-    --cyan: #67e8d0;
-    --lime: #c5ed72;
-    --orange: #ffb86b;
-    --red: #ff7777;
+    --ink: rgb(255, 255, 255); /* Couleur principale du texte */
+    --muted: #8da3a5; /* Couleur du texte atténué */
+    --surface: #092934; /* Couleur des surfaces et des panneaux */
+    --page: rgb(0, 0, 0); /* Couleur de fond de la page */
+    --line: rgba(180, 216, 210, .12); /* Couleur des bordures et séparateurs */
+    --lime: rgb(0, 185, 86); /* Couleur de victoire */
+    --orange: rgb(240, 160, 0); /* Couleur de match nul */
+    --red: rgb(224, 0, 0); /* Couleur de défaite */
+    --table-header: rgb(8, 42, 51);
+    --table-body: rgb(6, 31, 38);
+    --table-header-text: rgb(220, 230, 234);
+    --table-cell-text: rgb(255, 255, 255);
+    --table-header-border: rgba(255, 255, 255, 0.08);
+    --table-cell-border: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -94,7 +99,7 @@ body {
     width: 22px;
     height: 22px;
     border-radius: 7px;
-    color: #102124;
+    color: rgb(255, 255, 255);
     font-size: .65rem;
     font-style: normal;
     font-weight: 700;
@@ -124,17 +129,19 @@ body {
     width: 100%;
     min-width: 850px;
     border-collapse: collapse;
+    background: var(--table-body);
     text-align: center;
 }
 
 .form-list {
-    background: rgba(103, 232, 208, .03);
+    background: var(--table-header);
 }
 
 .league-table th {
     padding: 15px 12px;
-    color: var(--muted);
-    border-bottom: 1px solid var(--line);
+    color: var(--table-header-text);
+    border-bottom: 1px solid var(--table-header-border);
+    background: var(--table-header);
     font-size: .64rem;
     font-weight: 700;
     letter-spacing: .1em;
@@ -152,7 +159,8 @@ body {
 }
 
 .league-table tbody tr {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--table-cell-border);
+    background: transparent;
     transition: background .2s ease;
 }
 
@@ -166,25 +174,26 @@ body {
 
 .league-table td {
     padding: 14px 12px;
-    color: #b9cccb;
+    color: var(--table-cell-text);
+    background: transparent;
     font-size: .82rem;
     font-weight: 500;
 }
 
 .league-table td:first-child {
-    color: var(--muted);
+    color: var(--table-cell-text);
     font-family: 'Space Grotesk', sans-serif;
     font-size: .78rem;
 }
 
 .league-table tbody tr:first-child td:first-child,
 .league-table tbody tr:nth-child(2) td:first-child {
-    color: var(--lime);
+    color: var(--table-cell-text);
 }
 
 .league-table td:nth-child(10),
 .points-cell {
-    color: var(--ink);
+    color: var(--table-cell-text);
     font-size: .95rem;
     font-weight: 700;
 }
